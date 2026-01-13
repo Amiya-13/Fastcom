@@ -20,7 +20,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://fastcom-k9jv-ipe1di92p-amiyamishu1306-1096s-projects.vercel.app/"
+  origin: [
+    "https://fastcom-k9jv-ipe1di92p-amiyamishu1306-1096s-projects.vercel.app",
+    "http://localhost:5173",
+    "http://localhost:3000"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
