@@ -19,8 +19,28 @@ connectDB();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000"
+];
+
 app.use(cors({
-  origin: "https://fastcom-k9jv-ipe1di92p-amiyamishu1306-1096s-projects.vercel.app/"
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+
+        // Check if origin is localhost or Vercel deployment
+        if (
+            allowedOrigins.includes(origin) ||
+            origin.includes('vercel.app') ||
+            origin.includes('amiyamishu1306')
+        ) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
