@@ -21,8 +21,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="container flex-between">
-                <Link to="/" className="navbar-brand">
-                    ⚡ FastCom
+                <Link to="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
+                    <img src="/logo.jpg" alt="FastCom Logo" style={{ height: '40px', width: '40px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--accent-purple)' }} />
+                    <span>FastCom</span>
                 </Link>
 
                 {isAuthenticated ? (

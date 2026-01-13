@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // Auth Pages
 import Login from './pages/Login';
@@ -18,6 +19,10 @@ import ProductManagement from './pages/shopkeeper/ProductManagement';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
+
+// Legal Pages
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 import './index.css';
 
@@ -57,6 +62,9 @@ const LandingPage = () => {
   return (
     <div className="container" style={{ padding: '4rem 0', textAlign: 'center' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+          <img src="/logo.jpg" alt="FastCom Logo" style={{ height: '120px', width: '120px', borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--accent-purple)', boxShadow: 'var(--shadow-glow)' }} />
+        </div>
         <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>
           Welcome to <span className="text-gradient">FastCom</span>
         </h1>
@@ -194,9 +202,14 @@ function App() {
             }
           />
 
+          {/* Legal Pages */}
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <Footer />
       </AuthProvider>
     </BrowserRouter>
   );
