@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Fastcom
 MERN stack e-commerce platform connecting customers with local vendors
 =======
@@ -38,10 +38,9 @@ FastCom is a modern MERN stack e-commerce platform that bridges the gap between 
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- React 18
-- React Router v6
-- Axios
+- React 
 - Vite
+- CSS Tailwind
 - Modern CSS with Glassmorphism
 
 **Backend:**
@@ -143,13 +142,6 @@ npm run dev
 2. **Shopkeeper** - Manage online shop and products
 3. **Admin** - Platform management and oversight
 
-## 🎨 Design Features
-
-- Dark mode with vibrant gradients
-- Glassmorphism effects
-- Smooth animations and transitions
-- Fully responsive design
-- Modern card-based layouts
 
 ## 📄 License
 
@@ -161,7 +153,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Support
 
-For support, email support@fastcom.com or open an issue in this repository.
+For support, email amiyamishu5@gmail.com or open an issue in this repository.
 
 ---
 
