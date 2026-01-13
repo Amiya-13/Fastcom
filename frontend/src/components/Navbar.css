@@ -1,0 +1,43 @@
+.navbar {
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-name {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.user-role {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
