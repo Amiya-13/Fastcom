@@ -25,7 +25,6 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-<<<<<<< HEAD
     origin: function (origin, callback) {
         // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
@@ -42,14 +41,6 @@ app.use(cors({
         }
     },
     credentials: true
-=======
-  origin: [
-    "https://fastcom-k9jv-ipe1di92p-amiyamishu1306-1096s-projects.vercel.app",
-    "http://localhost:5173",
-    "http://localhost:3000"
-  ],
-  credentials: true
->>>>>>> 610187a5c43e9c818c56a7aa2edd591246a79bac
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
