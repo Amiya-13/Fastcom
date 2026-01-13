@@ -88,6 +88,7 @@
     flex: 1;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -130,4 +131,28 @@
 
 .text-warning {
     color: var(--warning);
+}
+
+@media (max-width: 768px) {
+    .product-image-container {
+        height: 180px;
+    }
+
+    .product-name {
+        font-size: 1.1rem;
+    }
+
+    .price-value {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        padding: 1rem;
+    }
+
+    .product-image-container {
+        height: 150px;
+    }
 }

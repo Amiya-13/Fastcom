@@ -112,3 +112,27 @@
 .subscription-info p {
     margin: 0.25rem 0;
 }
+
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .auth-header h1 {
+        font-size: 2rem;
+    }
+
+    .shopkeeper-fields {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .auth-card {
+        padding: 1.25rem;
+    }
+}
