@@ -19,7 +19,9 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://fastcom-k9jv-ipe1di92p-amiyamishu1306-1096s-projects.vercel.app/"
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
