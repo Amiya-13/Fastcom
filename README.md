@@ -153,7 +153,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Support
 
-For support, email amiyamishu5@gmail.com or open an issue in this repository.
+For support, email amiyamishu1306@gmail.com or open an issue in this repository.
 
 ---
 
