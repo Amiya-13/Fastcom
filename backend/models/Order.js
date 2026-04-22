@@ -73,14 +73,8 @@ const orderSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Calculate commission (3% of subtotal)
-orderSchema.pre('save', function (next) {
-    if (this.isModified('subtotal')) {
-        this.platformCommission = this.subtotal * (parseFloat(process.env.TRANSACTION_FEE_PERCENT) / 100);
-        this.totalPrice = this.subtotal;
-    }
-    next();
-});
+// Commission is calculated in orderRoutes.js at request time
+// where environment variables are guaranteed to be loaded
 
 const Order = mongoose.model('Order', orderSchema);
 
