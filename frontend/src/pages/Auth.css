@@ -60,10 +60,8 @@
 }
 
 .auth-link:hover {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .alert {
@@ -74,17 +72,17 @@
 }
 
 .alert-error {
-    background: rgba(239, 68, 68, 0.1);
-    border: 1px solid var(--error);
-    color: var(--error);
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
 }
 
 .shopkeeper-fields {
-    background: rgba(102, 126, 234, 0.05);
+    background: #f9fafb;
     padding: 1.5rem;
     border-radius: var(--radius-md);
     margin-top: 1rem;
-    border: 1px solid rgba(102, 126, 234, 0.2);
+    border: 1px solid #e5e7eb;
     animation: slideIn 0.3s ease;
 }
 
@@ -101,12 +99,12 @@
 }
 
 .subscription-info {
-    background: rgba(102, 126, 234, 0.1);
+    background: #f3f4f6;
     padding: 1rem;
     border-radius: var(--radius-md);
     margin-top: 1rem;
     text-align: center;
-    border: 1px dashed var(--accent-purple);
+    border: 1px dashed #d1d5db;
 }
 
 .subscription-info p {

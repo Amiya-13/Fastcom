@@ -106,7 +106,7 @@ table {
 }
 
 thead {
-    background: rgba(102, 126, 234, 0.1);
+    background: #f3f4f6;
 }
 
 th {
@@ -114,17 +114,17 @@ th {
     text-align: left;
     font-weight: 600;
     color: var(--text-primary);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #e5e7eb;
 }
 
 td {
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #e5e7eb;
     color: var(--text-secondary);
 }
 
 tr:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: #f9fafb;
 }
 
 @media (max-width: 768px) {
