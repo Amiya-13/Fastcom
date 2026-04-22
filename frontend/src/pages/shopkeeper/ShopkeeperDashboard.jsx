@@ -60,9 +60,14 @@ const ShopkeeperDashboard = () => {
 
                 {/* Header */}
                 <div className="dashboard-header">
-                    <div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                         <h1 className="text-gradient">Welcome, {user.name}!</h1>
-                        <p className="shop-name">🏪 {user.shopName}</p>
+                        <p className="shop-name" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>🏪 {user.shopName}</p>
+                        <div style={{ marginTop: '0.5rem' }}>
+                            <Link to="/shopkeeper/products" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                                ➕ Add New Product
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="subscription-badge glass-card">
@@ -125,6 +130,19 @@ const ShopkeeperDashboard = () => {
                         <p>Total Earnings</p>
                     </div>
                 </div>
+
+                {stats?.products?.total === 0 && (
+                    <div className="glass-card" style={{ padding: '3rem 2rem', textAlign: 'center', marginBottom: '2rem', border: '1px dashed var(--accent-purple)' }}>
+                        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🛍️</div>
+                        <h2 style={{ marginBottom: '0.5rem' }}>Your shop is empty!</h2>
+                        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', maxWidth: '400px', margin: '0 auto 1.5rem' }}>
+                            Start selling by adding your first product to your catalog. It only takes a minute.
+                        </p>
+                        <Link to="/shopkeeper/products" className="btn btn-primary" style={{ padding: '0.8rem 2rem', fontSize: '1.1rem' }}>
+                            ➕ Add Your First Product
+                        </Link>
+                    </div>
+                )}
 
                 {/* Earnings Breakdown */}
                 <div className="glass-card" style={{ padding: '1.5rem', marginBottom: '2rem' }}>
